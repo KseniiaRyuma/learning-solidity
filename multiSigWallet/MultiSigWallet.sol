@@ -54,7 +54,7 @@ contract MultiSigWallet {
         validOwner
         public {
         require(address(this).balance >= amount);
-        msg.sender.transfer(amount);
+        to.transfer(amount);
         TransferFunds(msg.sender, to, amount);
     }
 
